@@ -8,8 +8,21 @@ const jejuNames = [
     { name: "하늬", meaning: "바람" },
     { name: "달리", meaning: "달" },
     { name: "수월봉", meaning: "물, 봉우리" },
-    { name: "멩이", meaning: "고양이" }
-    
+    { name: "멩이", meaning: "고양이" },
+    { name: "구슬", meaning: "보석, 귀한 것" },
+    { name: "모슬포", meaning: "포구, 바다" },
+    { name: "도르멍", meaning: "돌멩이" },
+    { name: "왕벵이", meaning: "전복" },
+    { name: "올레", meaning: "작은 길, 골목" },
+    { name: "해녀", meaning: "바다 여성 잠수부" },
+    { name: "백록담", meaning: "산, 백록의 못" },
+    { name: "제주하늘", meaning: "하늘, 자연" },
+    { name: "비양도", meaning: "섬, 화산섬" },
+    { name: "삼다", meaning: "바람, 돌, 여자" },
+    { name: "영등", meaning: "바람, 신" },
+    { name: "한라", meaning: "산, 최고" },
+    { name: "노꼬메", meaning: "오름, 산" },
+    { name: "누리", meaning: "세상" }
 ];
 
 document.getElementById('generate-btn').addEventListener('click', function() {
@@ -24,11 +37,13 @@ document.getElementById('generate-btn').addEventListener('click', function() {
     const matches = jejuNames.filter(item => item.meaning.includes(userMeaning));
 
     if (matches.length > 0) {
-        const randomIndex = Math.floor(Math.random() * matches.length);
-        const resultName = matches[randomIndex].name;
+        const bestMatch = matches[0];  // 가장 잘 맞는 것 1개만 보여줌
         document.getElementById('result').textContent =
-            `${userName}님께 추천하는 제주어 이름: ${resultName} (${matches[randomIndex].meaning})`;
+            `${userName}님께 추천하는 제주어 이름: ${bestMatch.name} (${bestMatch.meaning})`;
     } else {
-        document.getElementById('result').textContent = "입력한 뜻과 관련된 제주어 이름을 찾지 못했어요 😢";
+        const randomIndex = Math.floor(Math.random() * jejuNames.length);
+        const randomName = jejuNames[randomIndex];
+        document.getElementById('result').textContent =
+            `입력한 뜻과 딱 맞는 이름은 없지만, ${userName}님께 이런 이름은 어때요? 👉 ${randomName.name} (${randomName.meaning})`;
     }
 });
