@@ -60,3 +60,16 @@ button:hover {
     font-size: 0.9em;
     color: #aaa;
 }
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px 0;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
