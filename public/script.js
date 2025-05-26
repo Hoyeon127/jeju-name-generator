@@ -2,8 +2,6 @@ const jejuNames = [
     { name: "가람", meaning: "강, 물" },
     { name: "하르방", meaning: "할아버지, 수호신" },
     { name: "바당", meaning: "바다" },
-    { name: "오름", meaning: "작은 산, 언덕" },
-    { name: "솔오름", meaning: "소나무 언덕" },
     { name: "우다", meaning: "비, 내리다" },
     { name: "하늬", meaning: "바람" },
     { name: "달리", meaning: "달" },
@@ -52,6 +50,18 @@ const jejuNames = [
     { name: "애순", meaning: "문학소녀" },
     { name: "관식", meaning: "사랑꾼" },
     { name: "상길", meaning: "학씨" },
+    { name: "순덕", meaning: "순하고 덕이 있다" },
+    { name: "복순", meaning: "복이 많은 순한 사람" },
+    { name: "영자", meaning: "영롱하다" },
+    { name: "옥자", meaning: "옥처럼 귀하다" },
+    { name: "상돌", meaning: "높고 단단한 사람" },
+    { name: "만수", meaning: "가득하다" },
+    { name: "경돌", meaning: "밝은 아이" },
+    { name: "순애", meaning: "순수한 사랑" },
+    { name: "말자", meaning: "말처럼 강인하고 부지런한 사람" },
+    { name: "달분", meaning: "달빛을 닮은 아이" },
+    { name: "애득", meaning: "귀엽고 덕스럽다" },
+    { name: "금복", meaning: "황금같은 복을 지닌 아이" },
        
 ];
 
