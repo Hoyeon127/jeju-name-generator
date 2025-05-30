@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주어 이름 결과</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .result-container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .result-image img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .result-name {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .result-meaning {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .result-buttons button {
+      margin: 6px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .share-btn { background-color: #4caf50; color: #fff; }
+    .download-btn { background-color: #2a4ded; color: #fff; }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .ad-banner img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <div class="result-image">
+      <img src="img/placeholder1.jpg" alt="제주 이름 이미지" id="resultImage">
+    </div>
+    <div class="result-name" id="jejuName">가람</div>
+    <div class="result-meaning" id="jejuMeaning">강, 물</div>
+    <div class="result-buttons">
+      <button class="share-btn">공유하기</button>
+      <button class="download-btn">이미지로 저장하기</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ad-banner">
+      <a href="https://www.instagram.com/dokkaebi_code/" target="_blank">
+        <img src="/banner.jpg" alt="코비랑 제주여행 갈래?">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // 이미지 랜덤 출력 로직
+    const imagePaths = [
+      'img/placeholder1.jpg',
+      'img/placeholder2.jpg',
+      'img/placeholder3.jpg',
+      'img/placeholder4.jpg',
+      'img/placeholder5.jpg'
+    ];
+    const randomIndex = Math.floor(Math.random() * imagePaths.length);
+    document.getElementById('resultImage').src = imagePaths[randomIndex];
+  </script>
+</body>
+</html>
