@@ -73,3 +73,14 @@ input[type="text"] {
     margin-left: auto;
     margin-right: auto;
 }
+
+.result-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
