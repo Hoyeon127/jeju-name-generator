@@ -74,13 +74,47 @@ input[type="text"] {
     margin-right: auto;
 }
 
+.result-card {
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
 .result-image {
   width: 100%;
   max-width: 280px;
   height: auto;
-  margin: 0 auto;
-  display: block;
   border-radius: 12px;
   object-fit: cover;
+  margin-bottom: 16px;
 }
 
+.result-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.result-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.result-card button {
+  margin: 0 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff914d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.result-card button:hover {
+  background-color: #ff7733;
+}
