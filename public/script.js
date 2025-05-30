@@ -74,16 +74,12 @@ document.getElementById('generate-btn').addEventListener('click', function() {
         return;
     }
 
-    const matches = jejuNames.filter(item => item.meaning.includes(userMeaning));
+    const query = new URLSearchParams({
+        name: userName,
+        meaning: userMeaning
+    });
 
-    if (matches.length > 0) {
-        const bestMatch = matches[0];  // 가장 잘 맞는 것 1개만 보여줌
-        document.getElementById('result').textContent =
-            `${userName}님께 추천하는 제주어 이름: ${bestMatch.name} (${bestMatch.meaning})`;
-    } else {
-        const randomIndex = Math.floor(Math.random() * jejuNames.length);
-        const randomName = jejuNames[randomIndex];
-        document.getElementById('result').textContent =
-            `입력한 뜻과 딱 맞는 이름은 없지만, ${userName}님께 이런 이름은 어때요? 👉 ${randomName.name} (${randomName.meaning})`;
-    }
+    // result.html 페이지로 이동하면서 값 전달
+    window.location.href = `result.html?${query.toString()}`;
 });
+
