@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>✨ 추천 결과 ✨</h1>
+  <div class="banner-layout">
+    <!-- 왼쪽 배너 -->
+    <img src="banner1.jpg" alt="왼쪽 배너" class="side-banner">
 
-    <div id="card" class="result-card">
-      <img id="result-image" class="result-image" src="" alt="결과 이미지">
-      <h2 id="jeju-name"></h2>
-      <p id="jeju-meaning"></p>
-      <div>
-        <button onclick="shareResult()">공유하기</button>
-        <button onclick="downloadImage()">이미지로 저장</button>
+    <!-- 가운데 결과 카드 -->
+    <div class="container">
+      <h1>✨ 추천 결과 ✨</h1>
+      <div id="card" class="result-card">
+        <img id="result-image" src="" alt="결과 이미지">
+        <h2 id="jeju-name"></h2>
+        <p id="jeju-meaning"></p>
+        <div>
+          <button onclick="shareResult()">공유하기</button>
+          <button onclick="downloadImage()">이미지로 저장</button>
+        </div>
+      </div>
+
+      <!-- 아래 배너 -->
+      <div style="margin-top: 40px; text-align: center;">
+        <a href="https://www.instagram.com/dokkaebi_code/" target="_blank" rel="noopener noreferrer">
+          <img src="/banner.jpg" alt="코비랑 국내여행 갈래?" class="bottom-banner">
+        </a>
       </div>
     </div>
 
-    <!-- 배너 광고 -->
-    <div style="margin-top: 40px; text-align: center;">
-      <a href="https://www.instagram.com/dokkaebi_code/" target="_blank" rel="noopener noreferrer">
-        <img src="/banner.jpg" alt="코비랑 국내여행 갈래?" 
-          style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      </a>
-    </div>
+    <!-- 오른쪽 배너 -->
+    <img src="banner2.jpg" alt="오른쪽 배너" class="side-banner">
   </div>
 </body>
 
