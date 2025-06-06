@@ -119,37 +119,55 @@ input[type="text"] {
   background-color: #ff7733;
 }
 
+/* 전체 레이아웃 */
 .banner-layout {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
+  align-items: stretch;
+  height: 100vh;
+  overflow: hidden;
 }
 
+/* 양쪽 배너 */
 .side-banner {
-  width: 120px;
-  max-height: 100%;
-  object-fit: contain;
-  margin: 0 20px;
+  width: 160px; /* 필요에 따라 조절 가능 */
+  height: 100vh;
+  object-fit: cover;
 }
 
+/* 결과 카드 컨테이너 */
+.container {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* 카드 */
 .result-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   padding: 24px;
   max-width: 480px;
+  width: 100%;
   text-align: center;
 }
 
+/* 카드 이미지 */
 .result-card img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
 }
 
+/* 하단 배너 */
 .bottom-banner {
   max-width: 100%;
+  margin-top: 32px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
