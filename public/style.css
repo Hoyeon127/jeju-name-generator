@@ -53,3 +53,51 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* index.html 전용 스타일 */
+.container {
+  max-width: 600px;
+  margin: 100px auto 40px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.container input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.container button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #38bdf8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #0ea5e9;
+}
+
