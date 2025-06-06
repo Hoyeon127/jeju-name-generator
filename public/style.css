@@ -2,22 +2,27 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fdfdfd;
   margin: 0;
-  padding: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .banner-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 20px;
   gap: 40px;
+  align-items: flex-start;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .side-banner-wrapper {
   flex-shrink: 0;
   width: 160px;
+  display: flex;
+  justify-content: center;
 }
 
 .side-banner {
@@ -28,8 +33,11 @@ body {
 }
 
 .result-wrapper {
+  flex: 1;
   max-width: 520px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .result-card {
@@ -37,6 +45,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -76,8 +86,8 @@ body {
 
 .bottom-banner {
   max-width: 100%;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin-top: 40px;
-  display: block;
 }
