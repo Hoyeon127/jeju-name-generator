@@ -118,3 +118,38 @@ input[type="text"] {
 .result-card button:hover {
   background-color: #ff7733;
 }
+
+.banner-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.side-banner {
+  width: 120px;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+.result-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 480px;
+  text-align: center;
+}
+
+.result-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.bottom-banner {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
