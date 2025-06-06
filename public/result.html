@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="banner-layout">
+<div class="banner-container">
   <!-- 왼쪽 배너 -->
-  <img src="banner1.jpg" alt="왼쪽 배너" class="side-banner">
+  <div class="side-banner-wrapper">
+    <img src="banner1.jpg" alt="왼쪽 배너" class="side-banner">
+  </div>
 
-  <!-- 가운데 결과 카드 전체를 감싸는 div -->
-  <div class="center-content">
+  <!-- 결과 카드 영역 -->
+  <div class="result-wrapper">
     <h1>✨ 추천 결과 ✨</h1>
     <div id="card" class="result-card">
       <img id="result-image" src="" alt="결과 이미지">
@@ -33,8 +35,11 @@
   </div>
 
   <!-- 오른쪽 배너 -->
-  <img src="banner2.jpg" alt="오른쪽 배너" class="side-banner">
+  <div class="side-banner-wrapper">
+    <img src="banner2.jpg" alt="오른쪽 배너" class="side-banner">
+  </div>
 </div>
+
 
 </body>
 
