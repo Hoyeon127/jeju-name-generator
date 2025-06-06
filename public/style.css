@@ -119,7 +119,7 @@ input[type="text"] {
   background-color: #ff7733;
 }
 
-/* 전체 레이아웃 */
+/* 전체 배치 레이아웃 */
 .banner-layout {
   display: flex;
   justify-content: center;
@@ -130,33 +130,33 @@ input[type="text"] {
 
 /* 양쪽 배너 */
 .side-banner {
-  width: 160px; /* 필요에 따라 조절 가능 */
+  width: 120px;           /* ✔️ 폭 줄임 */
   height: 100vh;
   object-fit: cover;
 }
 
-/* 결과 카드 컨테이너 */
+/* 중앙 컨텐츠 */
 .container {
   flex: 1;
-  padding: 40px 20px;
+  padding: 40px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
 }
 
-/* 카드 */
+/* 결과 카드 */
 .result-card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   padding: 24px;
-  max-width: 480px;
+  max-width: 440px;       /* ✔️ 조금 더 날씬하게 */
   width: 100%;
   text-align: center;
 }
 
-/* 카드 이미지 */
+/* 카드 내부 이미지 */
 .result-card img {
   max-width: 100%;
   height: auto;
@@ -170,4 +170,3 @@ input[type="text"] {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
