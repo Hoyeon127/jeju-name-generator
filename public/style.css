@@ -124,35 +124,47 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
   padding: 20px;
   flex-wrap: nowrap;
 }
 
-/* 좌우 배너 공통 */
 .side-banner {
   width: 100px;
   max-width: 100px;
   object-fit: contain;
 }
 
-/* 결과 카드 */
+.center-content {
+  flex: 1;
+  max-width: 480px;
+  width: 100%;
+}
+
 .result-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 24px;
-  max-width: 480px;
-  width: 100%;
   text-align: center;
 }
 
-/* 반응형 조정 */
+.result-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.bottom-banner {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일 대응 */
 @media (max-width: 768px) {
   .banner-layout {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -161,8 +173,7 @@ input[type="text"] {
     max-width: 60px;
   }
 
-  .result-card {
+  .center-content {
     max-width: 100%;
-    margin: 12px 0;
   }
 }
