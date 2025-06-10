@@ -40,23 +40,16 @@
     </div>
   </div>
 
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <img src="/popup_banner.png" alt="팝업 배너" />
+      <button id="to-result">변환하기</button>
+      <button id="close-modal" class="close-btn">✕</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
-
-  <script>
-  document.getElementById("generate-btn").addEventListener("click", function () {
-    const name = document.getElementById("name-input").value;
-    const meaning = document.getElementById("meaning-input").value;
-
-    if (!name || !meaning) {
-      alert("이름과 뜻(키워드)를 모두 입력해주세요!");
-      return;
-    }
-
-    const url = `popup.html?name=${encodeURIComponent(name)}&meaning=${encodeURIComponent(meaning)}`;
-
-    window.open(url, "popup", "width=500,height=600,resizable=no");
-  });
-</script>
 
 </body>
 </html>
