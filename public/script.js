@@ -65,24 +65,6 @@ const jejuNames = [
        
 ];
 
-document.getElementById('generate-btn').addEventListener('click', function() {
-    const userName = document.getElementById('name-input').value.trim();
-    const userMeaning = document.getElementById('meaning-input').value.trim();
-
-    if (!userName || !userMeaning) {
-        document.getElementById('result').textContent = "이름과 뜻을 모두 입력해 주세요!";
-        return;
-    }
-
-    const query = new URLSearchParams({
-        name: userName,
-        meaning: userMeaning
-    });
-
-    // result.html 페이지로 이동하면서 값 전달
-    window.location.href = `result.html?${query.toString()}`;
-});
-
 const bannerList = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg"];
 document.getElementById("left-banner").src = bannerList[Math.floor(Math.random() * bannerList.length)];
 document.getElementById("right-banner").src = bannerList[Math.floor(Math.random() * bannerList.length)];
