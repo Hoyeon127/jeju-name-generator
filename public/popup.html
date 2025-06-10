@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>광고 보기</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #38bdf8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0ea5e9;
+    }
+  </style>
+</head>
+<body>
+  <h2>광고를 확인한 후 변환하기 버튼을 눌러주세요</h2>
+  <img src="popup_banner.png" alt="광고 배너" />
+  <br />
+  <button id="convert-btn">변환하기</button>
+
+  <script>
+    document.getElementById("convert-btn").addEventListener("click", function () {
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+      const meaning = params.get("meaning");
+      const resultUrl = `result.html?name=${encodeURIComponent(name)}&meaning=${encodeURIComponent(meaning)}`;
+      window.location.href = resultUrl;
+    });
+  </script>
+</body>
+</html>
