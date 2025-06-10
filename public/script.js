@@ -84,10 +84,34 @@ document.getElementById('generate-btn').addEventListener('click', function() {
 });
 
 const bannerList = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg"];
+document.getElementById("left-banner").src = bannerList[Math.floor(Math.random() * bannerList.length)];
+document.getElementById("right-banner").src = bannerList[Math.floor(Math.random() * bannerList.length)];
 
-const randomLeft = bannerList[Math.floor(Math.random() * bannerList.length)];
-const randomRight = bannerList[Math.floor(Math.random() * bannerList.length)];
+document.getElementById("generate-btn").addEventListener("click", function () {
+  const name = document.getElementById("name-input").value.trim();
+  const meaning = document.getElementById("meaning-input").value.trim();
 
-document.getElementById("left-banner").src = randomLeft;
-document.getElementById("right-banner").src = randomRight;
+  if (!name || !meaning) {
+    alert("이름과 뜻(키워드)를 모두 입력해주세요!");
+    return;
+  }
+
+  // 저장 후 모달 표시
+  sessionStorage.setItem("name", name);
+  sessionStorage.setItem("meaning", meaning);
+
+  document.getElementById("modal").classList.remove("hidden");
+});
+
+document.getElementById("close-modal").addEventListener("click", function () {
+  document.getElementById("modal").classList.add("hidden");
+});
+
+document.getElementById("to-result").addEventListener("click", function () {
+  const name = sessionStorage.getItem("name");
+  const meaning = sessionStorage.getItem("meaning");
+
+  window.location.href = `result.html?name=${encodeURIComponent(name)}&meaning=${encodeURIComponent(meaning)}`;
+});
+
 
