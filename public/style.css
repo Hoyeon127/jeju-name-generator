@@ -1,3 +1,19 @@
+/* 반응형 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #fdfdfd;
@@ -175,4 +191,56 @@ body {
   margin-top: 8px;
 }
 
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .container, .result-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  h1, h2, p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  input[type="text"], button {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .side-banner-wrapper {
+    display: none; /* 모바일에선 좌우 배너 숨기기 */
+  }
+
+  .result-card {
+    padding: 16px;
+  }
+
+  #result-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-banner {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  #modal .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #modal img {
+    width: 100%;
+  }
+
+  #modal button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 
