@@ -41,5 +41,22 @@
   </div>
 
   <script src="script.js"></script>
+
+  <script>
+  document.getElementById("generate-btn").addEventListener("click", function () {
+    const name = document.getElementById("name-input").value;
+    const meaning = document.getElementById("meaning-input").value;
+
+    if (!name || !meaning) {
+      alert("이름과 뜻(키워드)를 모두 입력해주세요!");
+      return;
+    }
+
+    const url = `popup.html?name=${encodeURIComponent(name)}&meaning=${encodeURIComponent(meaning)}`;
+
+    window.open(url, "popup", "width=500,height=600,resizable=no");
+  });
+</script>
+
 </body>
 </html>
