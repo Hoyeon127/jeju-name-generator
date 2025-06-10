@@ -48,6 +48,22 @@ body {
   margin-bottom: 16px;
 }
 
+.result-btn {
+  margin: 0 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff914d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.result-btn:hover {
+  background-color: #ff7733;
+}
+
+
 .bottom-banner {
   max-width: 100%;
   border-radius: 12px;
