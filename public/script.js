@@ -66,8 +66,13 @@ const jejuNames = [
 ];
 
 const bannerList = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg"];
-document.getElementById("left-banner").src = bannerList[Math.floor(Math.random() * bannerList.length)];
-document.getElementById("right-banner").src = bannerList[Math.floor(Math.random() * bannerList.length)];
+let leftIndex = Math.floor(Math.random() * bannerList.length);
+let rightIndex;
+do {
+  rightIndex = Math.floor(Math.random() * bannerList.length);
+} while (rightIndex === leftIndex);
+document.getElementById("left-banner").src = bannerList[leftIndex];
+document.getElementById("right-banner").src = bannerList[rightIndex];
 
 document.getElementById("generate-btn").addEventListener("click", function () {
   const name = document.getElementById("name-input").value.trim();
