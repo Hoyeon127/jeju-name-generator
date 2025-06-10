@@ -83,3 +83,11 @@ document.getElementById('generate-btn').addEventListener('click', function() {
     window.location.href = `result.html?${query.toString()}`;
 });
 
+const bannerList = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg"];
+
+const randomLeft = bannerList[Math.floor(Math.random() * bannerList.length)];
+const randomRight = bannerList[Math.floor(Math.random() * bannerList.length)];
+
+document.getElementById("left-banner").src = randomLeft;
+document.getElementById("right-banner").src = randomRight;
+
